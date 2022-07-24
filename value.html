@@ -1,0 +1,24 @@
+{% extends 'land.html' %} 
+
+{% block head %} 
+    <title>Value</title>
+{% endblock %}
+
+{% block body %}
+    <div style="text-align: center;">
+      <div style="background: white;">
+        <strong><h1 style="font-family: 'Staatliches', cursive;font-size: 60px;padding-top: 20px;text-align:center;" class="text-center">SENTENCE SIMILARITY</h1></strong>
+        <hr>
+      </div>
+      <form action="/Similarity" method="POST">
+        <label for="sentence1"><b>SENTENCE 1</b> </label>
+        <input style="margin: auto;" class="form-control" type="text" name="sentence1" id="sentence1" required>
+        <br>
+        <label for="sentence2"><b>SENTENCE 2</b> </label>
+        <input style="margin: auto;"  class="form-control" type="text" name="sentence2" id="sentence2" required>
+        <br>
+        <p><small>All values are necessary</small></p>
+        <input style="font-family: 'Staatliches', cursive;" class='btn btn-dark btn-lg' type="submit" name="predicted" id="predicted" value="CHECK">
+      </form>
+    </div>
+{% endblock %}
