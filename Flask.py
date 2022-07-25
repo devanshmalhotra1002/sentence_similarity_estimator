@@ -34,8 +34,6 @@ def sentence_similarity():
             a = [pair[0] for pair in combination]
             b = [pair[1] for pair in combination]
             df = pd.DataFrame({'Sentence 1': a, 'Sentence 2': b})
-            df = df.loc[pd.DataFrame(np.sort(df[['Sentence 1', 'Sentence 2']], 1), index=df.index).drop_duplicates(keep='first').index]
-            df = df[df['Sentence 1'] != df['Sentence 2']]
 
             embeddings = spacy.load('en_core_web_sm')
 
